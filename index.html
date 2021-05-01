@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MAIN STYLES -->
     <link rel="stylesheet" href="./css/main.css">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title>JS SNACKS RECAP</title>
 </head>
 <body>
     
-
+    <div id="app">
+        <h1>Numeri di telefono</h1>
+        <section class="contacts">
+            <ul>
+                <li @click="showSurname(index)" v-for="contact in contacts" :class="{active: contact.active}">{{contact.name}} {{contact.surname}} {{contact.number}}</li>
+            </ul>
+        </section>
+    </div>
 
 
 
