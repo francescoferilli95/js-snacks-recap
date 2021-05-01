@@ -32,3 +32,10 @@ const browser = {
 
 console.log(browser);
 
+const newBrowser = browser.tab.filter((element, index) => {
+
+    return index === browser.activeTab + 2;
+
+});
+
+console.log(newBrowser);
